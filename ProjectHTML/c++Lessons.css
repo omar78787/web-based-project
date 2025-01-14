@@ -1,0 +1,58 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: aliceblue;
+    color: #333;
+}
+header {
+    background-color: rgb(123, 123, 230);
+    text-align: center;
+    padding: 20px 0;
+} 
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: bisque;
+}
+header p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: black;
+}
+nav ul {
+    padding: 0;
+    margin: 10px 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    background-color: inherit;
+}
+nav ul li a {
+    color: bisque;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+a:hover{
+    text-decoration: underline;
+    color: red;
+    background-color: cornflowerblue;
+}
+h1, h3{
+    color: cadetblue;
+}
+p{
+    margin: auto;
+    color: rgb(130, 75, 219);
+    font-weight: bold;
+}
+ol li{
+    color: green;
+    font-weight: bold;
+}
+ul li{
+    color: crimson;
+    font-weight: bold;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Lessons</title>
+    <link rel="stylesheet" href="../c++Lessons.css">
+</head>
+<body style ="background-color: white;">
+    <header>
+        <h1>C++ LESSONS </h1>
+        <p style="color: black;">BEST EDUCATIONAL MATERIAL LIBRARY</p>
+        <nav>
+            <ul>
+                <li><a href="../content.html">Back to Content page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="Lesson 2.html"> <-- Lesson 2</a>
+<h1>Lesson 3: Operators in C++</h1>
+<h3>Overview </h3>
+<p> Operators in C++ are symbols used to perform operations on variables and values. They are fundamental for arithmetic computations, comparisons, and logical decisions.</p>
+    <h3>Types of Operators in C++ </h3>
+    <ol>
+        <li>Arithmetic Operators Perform basic mathematical operations.(+-*/%)</li>
+        <li>Relational (Comparison) Operators Compare two values and return a boolean result.(== !=>< >=<=)</li>
+        <li>Logical Operators Combine multiple boolean expressions. ( && ` !)</li>
+        <li>Assignment Operators Assign values to variables. (= += -=)</li>
+<li>Unary Operators Operate on a single operand (+ - ++ --)</li>
+<li>Bitwise Operators Perform operations at the bit level (& ` ^  ~)</li>    </ol>
+
+<h3>Operator Precedence</h3>
+    <ol>
+        <li>Parentheses ()</li>
+        <li>Unary operators +, -, ++, --</li>
+        <li>Arithmetic operators *, /, %</li>
+        <li>Relational operators <, >, ==</li>
+        <li>Logical operators &&, ||</li>
+<li>Assignment =, +=, -=</li>
+    </ol>
+
+<h3>Code Example:</h3>
+<p style="background-color: rgb(0, 0, 0); color:white;">
+#include <iostream>
+<br>
+int main() {
+    <br>int a = 10, b = 5;
+
+    <br> // Arithmetic operations
+    <br>  std::cout << "Sum: " << (a + b) << std::endl;
+    <br>  std::cout << "Difference: " << (a - b) << std::endl;
+
+    <br> // Relational and Logical
+    <br>  std::cout << "Is a > b? " << (a > b) << std::endl;
+    <br> std::cout << "Logical AND: " << ((a > b) && (b > 0)) << std::endl;
+
+    <br>  // Assignment
+    <br> a += 2; // a = a + 2
+    <br>  std::cout << "New a: " << a << std::endl;
+
+    <br> // Bitwise
+    <br>  std::cout << "Bitwise AND: " << (a & b) << std::endl;
+
+    <br>  return 0;
+}
+
+    </p>
+ <h3> Output: </h3>
+ <p style="background-color: rgb(0, 0, 0); color:white;">
+     Sum: 15
+    <br>Difference: 5
+    <br>Is a > b? 1
+    <br>Logical AND: 1
+    <br>New a: 12
+    <br>Bitwise AND: 4
+
+    </p>
+   
+
+   
+    <a href="Lesson 4.html">Lesson 4 -></a>
+</body>
+</html>

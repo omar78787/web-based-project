@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Lessons</title>
+    <link rel="stylesheet" href="../c++Lessons.css">
+</head>
+<body style ="background-color: white;">
+    <header>
+        <h1>C++ LESSONS </h1>
+        <p style="color: black;">BEST EDUCATIONAL MATERIAL LIBRARY</p>
+        <nav>
+            <ul>
+                <li><a href="../content.html">Back to Content page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="Lesson 9.html"> <-- Lesson 9</a>
+<h1>Lesson 10: Object-Oriented Programming (OOP) in C++</h1>
+<h3>Overview </h3>
+<p>Object-Oriented Programming (OOP) is a programming paradigm that is centered around objects and classes. C++ is one of the most widely used OOP languages, enabling developers to model real-world problems using entities (objects) that have attributes (data members) and behaviors (functions or methods). OOP enhances modularity, code reuse, and maintainability. </p>
+    <h3> Core Concepts of OOP</h3>
+    <ul>
+        <li>Classes and Objects</li>
+        <ol><li>Class: A blueprint or prototype for creating objects (instances).</li>
+        <li>Object: An instance of a class. It is created using the class as a template.</li></ol>
+    </ul>
+<h3>Code Example:</h3>
+<p style="background-color: rgb(0, 0, 0); color:white;">
+    class Car {
+   <br>     public:
+   <br>           // Attributes (data members)
+   <br>            std::string brand;
+   <br>             int year;
+        
+   <br>           // Methods (functions)
+   <br>         void drive() {
+    <br>               std::cout << "The " << brand << " car is driving." << std::endl;
+                <br>           }
+        };
+        
+        <br>         int main() {
+            <br>          // Creating an object of class Car
+            <br>            Car myCar;
+            <br>             myCar.brand = "Toyota";
+            <br>              myCar.year = 2020;
+            <br>             myCar.drive();  // Call method on the object
+        
+            <br>            return 0;
+        }
+        
+    </p>
+ <h3> Output: </h3>
+ <p style="background-color: rgb(0, 0, 0); color:white;">
+    The Toyota car is driving.
+    </p>
+   
+
+   
+    
+</body>
+</html>
