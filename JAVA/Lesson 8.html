@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA Lessons</title>
+    <link rel="stylesheet" href="../javaLessons.css">
+</head>
+<body style ="background-color: white;">
+    <header>
+        <h1>JAVA LESSONS </h1>
+        <p style="color: black;">BEST EDUCATIONAL MATERIAL LIBRARY</p>
+        <nav>
+            <ul>
+                <li><a href="../java.html">Back to Lessons page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="Lesson 7.html"> &lt;-- Lesson 7</a>
+<h1>Lesson 8: Strings </h1>
+<h3>Overview: </h3>
+<p>Strings in Java represent sequences of characters. They are widely used for text manipulation and are objects of the String class, part of the java.lang package.</p>
+    <h3> Characteristics of Strings in Java</h3>
+    <ol>
+        <li>Immutable: Once a String object is created, it cannot be changed.</li>
+           <li> Stored in the String Pool: Java optimizes memory usage by storing strings in a common pool.</li>
+            <li>Built-in Methods: Java provides a variety of methods for string manipulation.</li>
+    </ol>
+<h3>Code Example:</h3>
+<p style="background-color: rgb(0, 0, 0); color:white;">
+    public class HelloWorld // {<br>
+        public static void main(String[] args)<br> {
+             <br>
+  <br>          String message = "Hello, Java!";
+  <br>            System.out.println("Original String: " + message);
+   
+  <br>        // Length
+  <br>            System.out.println("Length: " + message.length());
+     
+  <br>          // Concatenation
+  <br>         System.out.println("Concatenated String: " + message.concat(" Welcome!"));
+     
+  <br>         // Substring
+  <br>        System.out.println("Substring: " + message.substring(7, 11));
+     
+  <br>         // Character at index
+  <br>         System.out.println("Character at Index 1: " + message.charAt(1));
+     
+  <br>         // Case conversion
+  <br>        System.out.println("Uppercase: " + message.toUpperCase());
+  <br>        System.out.println("Lowercase: " + message.toLowerCase());
+     
+  <br>           // Replacing characters
+  <br>         System.out.println("Replaced String: " + message.replace("Java", "World"));
+     
+  <br>         // Using StringBuilder
+  <br>        StringBuilder sb = new StringBuilder("Java");
+  <br>        sb.append(" Programming");
+  <br>         System.out.println("StringBuilder: " + sb.toString());
+        }
+    }
+    </p>
+ <h3> Output: </h3>
+ <p style="background-color: rgb(0, 0, 0); color:white;">
+ <br>   Original String: Hello, Java!
+ <br>  Length: 12
+ <br>Concatenated String: Hello, Java! Welcome!
+ <br>Substring: Java
+ <br>Character at Index 1: e
+ <br>Uppercase: HELLO, JAVA!
+ <br>Lowercase: hello, java!
+ <br>Replaced String: Hello, World!
+ <br>StringBuilder: Java Programming
+       
+    </p>
+  
+    <a href="Lesson 9.html">Lesson 9 -></a>
+</body>
+</html>

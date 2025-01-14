@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Lessons</title>
+    <link rel="stylesheet" href="../c++Lessons.css">
+</head>
+<body style ="background-color: white;">
+    <header>
+        <h1>C++ LESSONS </h1>
+        <p style="color: black;">BEST EDUCATIONAL MATERIAL LIBRARY</p>
+        <nav>
+            <ul>
+                <li><a href="../content.html">Back to Content page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="Lesson 8.html"> <-- Lesson 8</a>
+<h1>Lesson 9: References in C++</h1>
+<h3>Overview </h3>
+<p>In C++, a reference is an alias for another variable. It allows you to directly refer to a variable without using pointers, making code easier to read and less error-prone. References provide the ability to pass variables to functions without copying them, much like pointers, but with a simpler and safer syntax. </p>
+    <h3>Differences Between References and Pointers </h3>
+    <ol><li> A reference must be initialized when it is created, while a pointer can be initialized later.</li>
+    <p style="background-color: rgb(0, 0, 0); color:white;">int a = 10;
+      <br>  int& ref = a; // Must initialize
+       <br> int* ptr = nullptr; // Can be initialized later
+        </p>
+        <li>Reassignment: A reference cannot be reassigned to refer to a different variable, while a pointer can.</li>
+        <p style="background-color: rgb(0, 0, 0); color:white;">
+           int a = 10, b = 20;
+            <br>     int& ref = a;
+            <br>    ref = b; // This does NOT change the reference to point to b. It changes the value of 'a' to 'b'.
+</p>            
+    <li>Nullability: Pointers can be null, but references must always refer to valid objects (cannot be null).</li>
+    <p style="background-color: rgb(0, 0, 0); color:white;">int a = 10;
+        <br>    int& ref = a;  // ref cannot be null
+        <br>    int* ptr = nullptr;  // ptr can be null
+        </p>
+    </ol>
+<h3>Code Example:</h3>
+<p style="background-color: rgb(0, 0, 0); color:white;">
+    #include <iostream>
+
+    <br>    void swap(int& a, int& b) {
+        <br>          int temp = a;
+            <br>         a = b;
+            <br>         b = temp;
+        }
+        
+        <br>  int main() {
+            <br>   int x = 5, y = 10;
+            <br>    std::cout << "Before swap: x = " << x << ", y = " << y << std::endl;
+            <br>      swap(x, y);
+            <br>     std::cout << "After swap: x = " << x << ", y = " << y << std::endl;
+            <br>     return 0;
+        }
+        
+    </p>
+ <h3> Output: </h3>
+ <p style="background-color: rgb(0, 0, 0); color:white;">
+    Before swap: x = 5, y = 10
+    <br> After swap: x = 10, y = 5
+
+    </p>
+   
+
+   
+    <a href="Lesson 10.html">Lesson 10 -></a>
+</body>
+</html>

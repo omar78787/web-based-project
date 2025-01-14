@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA Lessons</title>
+    <link rel="stylesheet" href="../javaLessons.css">
+</head>
+<body style ="background-color: white;">
+    <header>
+        <h1>JAVA LESSONS </h1>
+        <p style="color: black;">BEST EDUCATIONAL MATERIAL LIBRARY</p>
+        <nav>
+            <ul>
+                <li><a href="../java.html">Back to Lessons page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="Lesson 8.html"> &lt;-- Lesson 8</a>
+<h1>Lesson 9: Exception Handling </h1>
+<h3>Overview: </h3>
+<p>Exception handling in Java is a mechanism to handle runtime errors, ensuring smooth program execution. It helps in maintaining control over the program flow during unexpected scenarios.</p>
+    <h3>Key Concepts
+    </h3>
+    <ol>
+        <li>What is an Exception?
+            An exception is an event that disrupts the normal flow of a program. It is an object that the Java runtime environment generates when an error occurs.</li>
+           <li>Types of Exceptions:
+<ul> <li>Checked Exceptions: Known at compile time (e.g., IOException, SQLException).</li>
+<li>Unchecked Exceptions: Occur at runtime (e.g., ArithmeticException, NullPointerException).</li>
+<li>Errors: Serious issues outside application control (e.g., OutOfMemoryError).</li></ul>
+             </li>
+        <h3>Exception Handling Keywords</h3>
+        <ol>
+            <li>try: Encloses code that might throw an exception.</li>
+            <li>catch: Handles the exception.</li>
+            <li>finally: Executes code regardless of whether an exception occurs.</li>
+            <li>throw: Used to explicitly throw an exception.</li>
+            <li>throws: Declares exceptions a method might throw.</li>
+        </ol>
+    </ol>
+<h3>Code Example:</h3>
+<p style="background-color: rgb(0, 0, 0); color:white;">
+    public class HelloWorld // {<br>
+        public static void main(String[] args)<br> {
+             <br>
+<br>             try {
+    <br>             int[] numbers = {1, 2, 3};
+    <br>         System.out.println(numbers[5]); // Throws ArrayIndexOutOfBoundsException
+    <br>     } catch (ArithmeticException e) {
+        <br>         System.out.println("Arithmetic Exception occurred.");
+        <br> } catch (ArrayIndexOutOfBoundsException e) {
+            <br>     System.out.println("Array Index Out of Bounds Exception occurred.");
+            }
+        }
+    }
+    </p>
+ <h3> Output: </h3>
+ <p style="background-color: rgb(0, 0, 0); color:white;">
+    Array Index Out of Bounds Exception occurred.
+
+    </p>
+   
+    <a href="Lesson 10.html">Lesson 10 -></a>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Lessons</title>
+    <link rel="stylesheet" href="../c++Lessons.css">
+</head>
+<body style ="background-color: white;">
+    <header>
+        <h1>C++ LESSONS </h1>
+        <p style="color: black;">BEST EDUCATIONAL MATERIAL LIBRARY</p>
+        <nav>
+            <ul>
+                <li><a href="../content.html">Back to Content page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="Lesson 6.html"> <-- Lesson 6</a>
+<h1>Lesson 7: Arrays in C++</h1>
+<h3>Overview </h3>
+<p>An array in C++ is a collection of elements of the same data type stored in contiguous memory locations. Arrays are useful for managing large amounts of data efficiently under a single variable name.</p>
+    <h3> Types of Arrays</h3>
+<ol>
+    <li>Single-Dimensional Arrays</li>
+<li>Multi-Dimensional Arrays</li>
+<li>Dynamic Arrays</li>
+
+
+
+
+
+</ol>
+
+
+
+<h3>Code Example:</h3>
+<p style="background-color: rgb(0, 0, 0); color:white;">
+    #include <iostream>
+        #include <algorithm>
+        
+   <br>     int main() {
+    <br>         int arr[5] = {50, 20, 40, 10, 30};
+        
+    <br>         // Display original array
+    <br>            std::cout << "Original array: ";
+    <br>         for (int i = 0; i < 5; i++) {
+        <br>              std::cout << arr[i] << " ";
+            }
+            <br>        std::cout << std::endl;
+        
+            <br>          // Sort the array
+            <br>         std::sort(arr, arr + 5);
+        
+            <br>          // Display sorted array
+            <br>            std::cout << "Sorted array: ";
+            <br>           for (int i = 0; i < 5; i++) {
+                <br>              std::cout << arr[i] << " ";
+            }
+            <br>       std::cout << std::endl;
+        
+            <br>         // Search for an element
+            <br>           int key = 20;
+            <br>            int* result = std::find(arr, arr + 5, key);
+            <br>            if (result != arr + 5) {
+                <br>               std::cout << "Element " << key << " found at index " << (result - arr) << std::endl;
+                <br>          } else {
+                    <br>               std::cout << "Element " << key << " not found." << std::endl;
+            }
+        
+            <br>        return 0;
+        }
+        
+    </p>
+ <h3> Output: </h3>
+ <p style="background-color: rgb(0, 0, 0); color:white;">
+    Original array: 50 20 40 10 30
+    <br> Sorted array: 10 20 30 40 50
+    <br> Element 20 found at index 1
+
+    </p>
+   
+
+   
+    <a href="Lesson 8.html">Lesson 8 -></a>
+</body>
+</html>
