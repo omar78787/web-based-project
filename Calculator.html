@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="pagestyle.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+      }
+      .container img {
+        max-width: 100%;
+        height: auto;
+      }
+      .about-section,
+      .courses-section {
+        margin-bottom: 30px;
+      }
+      h2 {
+        color: #333;
+        border-bottom: 2px solid #0078d7;
+        padding-bottom: 5px;
+      }
+      p {
+        color: #555;
+        line-height: 1.6;
+      }
+      ul {
+        padding: 0;
+      }
+      .ul li {
+        background: #f0f8ff;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+      ul li strong {
+        color: #0078d7;
+      }
+      #results {
+        display: none;
+      }
+    </style>
+  </head>
+  <body style="background-color: white">
+    <header>
+      <h1 id="date">Date:</h1>
+      <p>Calculate how long it takes for you to complete your study!</p>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="content.html">Content</a></li>
+          <li><a href="Stories.html">Success Stories</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+          <li><a href="lessons.html">More Material</a></li>
+          <li><a href="Calculator.html">Study-Plan Calculator</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <form>
+      <br />
+      <br />
+      <fieldset>
+        <legend style="font-size: xx-large">
+          <b>Study plan calculator</b>
+        </legend>
+        <br />
+        <b>How many hours per day are you planning on studying?(1-24)<br /></b>
+        <input type="number" name="hours" id="hours" />
+        <span id="er1" style="color: red"></span>
+        <br />
+        <br />
+        <b>When do you plan to start studying?</b><br />
+        <input type="date" name="startdate" id="startdate" />
+        <span id="er2" style="color: red"></span> <br />
+        <br />
+        <b>Which courses would you like to complete?</b><br /><span
+          id="er3"
+          style="color: red"
+        ></span
+        ><br />
+        <input type="checkbox" name="courses" value="JAVA" /><b>JAVA</b><br />
+        <input type="checkbox" name="courses" value="HTML" /><b>HTML</b><br />
+        <input type="checkbox" name="courses" value="C++" /><b>C++</b><br />
+        <hr />
+        <center>
+          <input
+            type="button"
+            onclick="calculateTime()"
+            name="calculatebutton"
+            value="Calculate"
+          />
+        </center>
+      </fieldset>
+    </form>
+    <br />
+    <fieldset id="results">
+      <legend style="font-size: xx-large">Results</legend>
+      <textarea
+        id="resultsText"
+        rows="10"
+        cols="50"
+        value=""
+        disabled
+      ></textarea>
+    </fieldset>
+    <script>
+      var d = new Date();
+      document.getElementById("date").innerHTML += d;
+      function calculateTime() {
+        let hours = Number(document.getElementById("hours").value);
+        let startDate = document.getElementById("startdate").value;
+        let courses = document.getElementsByName("courses");
+        let count = 0;
+        let error = 0;
+        let coursenames = "";
+        let daysneeded = 0;
+        let totalhours = 0;
+
+        if (hours < 1 || hours > 24) {
+          document.getElementById("er1").innerText =
+            "Please input a value that is within the given range";
+          error++;
+        } else {
+          document.getElementById("er1").innerText = "";
+        }
+
+        if (startDate == "") {
+          error++;
+          document.getElementById("er2").innerText =
+            "Please select a start date.";
+        } else {
+          document.getElementById("er2").innerText = "";
+        }
+
+        for (var i = 0; i < courses.length; i++) {
+          if (courses[i].checked) {
+            count++;
+            coursenames += courses[i].value + " ";
+          }
+        }
+        if (count < 1) {
+          document.getElementById("er3").innerText = "Please select a course";
+          error++;
+        } else {
+          totalhours = count * 35;
+          document.getElementById("er3").innerText = "";
+        }
+
+        if (error == 0) {
+          document.getElementById("results").style.display = "block";
+        } else {
+          document.getElementById("results").style.display = "none";
+        }
+
+        daysneeded = Math.ceil(totalhours / hours);
+
+        let dateObj = new Date(startDate);
+
+        dateObj.setDate(dateObj.getDate() + daysneeded);
+        let endDate = dateObj.toISOString().split("T")[0];
+        document.getElementById("resultsText").value =
+          "If you start on (" +
+          startDate +
+          ") and you would like to complete the course/s: (" +
+          coursenames +
+          ") and you spend a total of:(" +
+          hours +
+          ") hours per day" +
+          " it'll take you " +
+          daysneeded +
+          " days which means you'll be done on " +
+          endDate +
+          " ";
+      }
+    </script>
+  </body>
+</html>
